@@ -1,5 +1,3 @@
-
-
 <div class="main">
     <div class="content">
         <div class="content_top" style="background: #414045">

@@ -16,11 +16,8 @@
         <link id="base-style-responsive" href="<?php echo base_url()?>assets/admin/css/style-responsive.css" rel="stylesheet">
         <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&subset=latin,cyrillic-ext,latin-ext' rel='stylesheet' type='text/css'>
         <link rel="shortcut icon" href="<?php echo base_url()?>assets/admin/img/favicon.jpg">
-       
     </head>
-
     <body>
-        
         <div class="navbar">
             <div class="navbar-inner">
                 <div class="container-fluid">
@@ -30,10 +27,8 @@
                         <span class="icon-bar"></span>
                     </a>
                     <a class="brand" href="<?php echo base_url('dashboard')?>"><span>Ecommerce Admin Panel</span></a>
-
                     <div class="nav-no-collapse header-nav">
                         <ul class="nav pull-right">
-                           
                             <li class="dropdown">
                                 <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
                                     <i class="halflings-icon white user"></i> <?php echo $this->session->userdata('user_name');?>
@@ -49,7 +44,6 @@
                             </li>
                         </ul>
                     </div>
-
                 </div>
             </div>
         </div>
@@ -60,20 +54,14 @@
                         <ul class="nav nav-tabs nav-stacked main-menu">
                             <li><a href="<?php echo base_url('dashboard')?>"><i class="icon-dashboard"></i><span class="hidden-tablet"> Dashboard</span></a></li>
                             <li class="<?php
-                            if ($this->uri->uri_string() == 'customer/register') {echo "active";}?>"><a href="<?php echo base_url('/customer/register'); ?>"><i class="icon-th"></i><span class="hidden-tablet"> Add Customer</span></a> </li>	
+                            if ($this->uri->uri_string() == 'customer/register') {echo "active";}?>"><a href="<?php echo base_url('/customer/register'); ?>"><i class="icon-th"></i><span class="hidden-tablet"> Add User</span></a> </li>	
                             <li class="<?php
-                            if ($this->uri->uri_string() == 'manage/customer') {echo "active";}?>"><a href="<?php echo base_url('/manage/customer'); ?>"><i class="icon-th"></i><span class="hidden-tablet"> Manage Customer</span></a> </li>	
-                            <li><a href="<?php echo base_url('add/category')?>"><i class="icon-th"></i><span class="hidden-tablet"> Add Category</span></a></li>
-                            <li><a href="<?php echo base_url('manage/category')?>"><i class="icon-tasks"></i><span class="hidden-tablet"> Manage Category</span></a></li>
-                            <li><a href="<?php echo base_url('add/brand')?>"><i class="icon-edit"></i><span class="hidden-tablet"> Add Brand</span></a></li>
-                            <li><a href="<?php echo base_url('manage/brand')?>"><i class="icon-list-alt"></i><span class="hidden-tablet"> Manage Brand</span></a></li>
+                            if ($this->uri->uri_string() == 'manage/customer') {echo "active";}?>"><a href="<?php echo base_url('/manage/customer'); ?>"><i class="icon-th"></i><span class="hidden-tablet"> Manage User</span></a> </li>
                             <li><a href="<?php echo base_url('add/product')?>"><i class="icon-shopping-cart"></i><span class="hidden-tablet"> Add Product</span></a></li>
                             <li><a href="<?php echo base_url('manage/product')?>"><i class="icon-eye-open"></i><span class="hidden-tablet"> Manage Product</span></a></li>
-                            <li><a href="<?php echo base_url('manage/order');?>"><i class="icon-calendar"></i><span class="hidden-tablet"> Manage Order</span></a></li>
                         </ul>
                     </div>
                 </div>
-
                 <noscript>
                 <div class="alert alert-block span10">
                     <h4 class="alert-heading">Warning!</h4>

@@ -6,7 +6,18 @@ class Customer_Model extends CI_Model
     {
         return $this->db->insert('tbl_customer', $data);
     }
-
+    public function tbl_customer(){
+        $this->db->select('*');
+        $this->db->from('tbl_customer');
+        $query = $this->db->get();
+        return $query->result();
+    }
+    public function delete()
+    {
+        $this->db->where('id');
+        $this->db->delete();
+    }
+    
     public function getall_customer_info()
     {
         $this->db->select('*');
