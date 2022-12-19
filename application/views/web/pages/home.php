@@ -2,8 +2,7 @@
 
 
 <div class="main">
-    <div class="content" style="background:bottom;
-">
+    <div class="content" >
         <div class="content_top" style="background: #414045">
             <div class="heading" >
                 <h3 style="color:white">Feature Products</h3>

@@ -139,15 +139,6 @@ class Web_Model extends CI_Model
         $this->db->insert('tbl_order_details', $oddata);
     }
 
-    public function get_all_slider_post()
-    {
-        $this->db->select('*');
-        $this->db->from('tbl_slider');
-        $this->db->where('publication_status', 1);
-        $info = $this->db->get();
-        return $info->result();
-    }
-
     public function get_all_popular_posts()
     {
         $this->db->select('*');
