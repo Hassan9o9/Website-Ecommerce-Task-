@@ -1,5 +1,4 @@
 <?php
-
 defined('BASEPATH') or exit('No direct script access allowed');
 
 class Customer extends CI_Controller
@@ -21,7 +20,6 @@ class Customer extends CI_Controller
     public function manage_customer()
     {
         $data = array();
-        $data['all_customer'] = $this->customer_model->getall_customer_info();
         $data['maincontent'] = $this->load->view('admin/pages/manage_customer', $data, true);
         $this->load->view('admin/master', $data);
     }
@@ -50,9 +48,7 @@ class Customer extends CI_Controller
             $this->session->set_flashdata('message', validation_errors());
             redirect('add/customer');
         }
-
     }
-
     public function delete_customer($id)
     {
         $result = $this->customer_model->delete_customer_info($id);
@@ -97,14 +93,9 @@ class Customer extends CI_Controller
             $this->session->set_flashdata('message', validation_errors());
             redirect('add/customer');
         }
-
     }
-
-    
-
     public function get_user()
     {
-
         $email = $this->session->userdata('user_email');
         $name = $this->session->userdata('user_name');
         $id = $this->session->userdata('user_id');
@@ -112,7 +103,5 @@ class Customer extends CI_Controller
         if ($email == false) {
             redirect('admin');
         }
-
     }
-
 }

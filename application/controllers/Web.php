@@ -136,6 +136,12 @@ class Web extends CI_Controller
         $data['maincontent'] = $this->load->view('admin/pages/add_customer', '', true);
         $this->load->view('admin/master', $data);
     }
+    public function customer_manage()
+    {
+        $data = array();
+        $data['maincontent'] = $this->load->view('admin/pages/manage_customer', '', true);
+        $this->load->view('admin/master', $data);
+    }
 
     public function customer_login()
     {

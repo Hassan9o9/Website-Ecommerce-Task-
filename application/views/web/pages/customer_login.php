@@ -1,5 +1,3 @@
-
-
 <div class="main">
     <div class="content" style="text-align: center">
          <div class="login_panel" style="width:400px;text-align:center;display:inline-block;float: none">

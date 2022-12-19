@@ -40,6 +40,15 @@ $route['update/category/(:num)']      = 'category/update_category/$1';
 $route['published/category/(:num)']   = 'category/published_category/$1';
 $route['unpublished/category/(:num)'] = 'category/unpublished_category/$1';
 
+//Customer  Route List
+$route['add/customer']                = 'customer/add_customer';
+$route['manage/customer']             = 'customer/manage_customer';
+$route['save/customer']               = 'customer/save_customer';
+$route['delete/customer/(:num)']      = 'customer/delete_customer/$1';
+$route['edit/customer/(:num)']        = 'customer/edit_customer/$1';
+$route['update/customer/(:num)']      = 'customer/update_customer/$1';
+
+
 //Brand  Route List
 $route['add/brand']                = 'brand/add_brand';
 $route['manage/brand']             = 'brand/manage_brand';

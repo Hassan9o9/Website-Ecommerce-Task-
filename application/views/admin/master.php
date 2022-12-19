@@ -61,6 +61,8 @@
                             <li><a href="<?php echo base_url('dashboard')?>"><i class="icon-dashboard"></i><span class="hidden-tablet"> Dashboard</span></a></li>
                             <li class="<?php
                             if ($this->uri->uri_string() == 'customer/register') {echo "active";}?>"><a href="<?php echo base_url('/customer/register'); ?>"><i class="icon-th"></i><span class="hidden-tablet"> Add Customer</span></a> </li>	
+                            <li class="<?php
+                            if ($this->uri->uri_string() == 'manage/customer') {echo "active";}?>"><a href="<?php echo base_url('/manage/customer'); ?>"><i class="icon-th"></i><span class="hidden-tablet"> Manage Customer</span></a> </li>	
                             <li><a href="<?php echo base_url('add/category')?>"><i class="icon-th"></i><span class="hidden-tablet"> Add Category</span></a></li>
                             <li><a href="<?php echo base_url('manage/category')?>"><i class="icon-tasks"></i><span class="hidden-tablet"> Manage Category</span></a></li>
                             <li><a href="<?php echo base_url('add/brand')?>"><i class="icon-edit"></i><span class="hidden-tablet"> Add Brand</span></a></li>

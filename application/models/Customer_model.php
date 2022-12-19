@@ -36,18 +36,4 @@ class Customer_Model extends CI_Model
         return $this->db->update('tbl_customer', $data);
     }
 
-    public function published_customer_info($id)
-    {
-        $this->db->set('publication_status', 1);
-        $this->db->where('id', $id);
-        return $this->db->update('tbl_customer');
-    }
-
-    public function unpublished_customer_info($id)
-    {
-        $this->db->set('publication_status', 0);
-        $this->db->where('id', $id);
-        return $this->db->update('tbl_customer');
-    }
-
 }
