@@ -1,5 +1,4 @@
 <?php
-
 class Customer_Model extends CI_Model
 {
     public function save_customer_info($data)
@@ -46,5 +45,4 @@ class Customer_Model extends CI_Model
         $this->db->where('id', $id);
         return $this->db->update('tbl_customer', $data);
     }
-
 }

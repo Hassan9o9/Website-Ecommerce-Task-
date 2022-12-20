@@ -7,11 +7,10 @@
             <div class="clear"></div>
         </div>
 
-        <?php
-        $arr_chunk_product = array_chunk($get_all_product, 4);
-
+        <!-- <?php
+        // $arr_chunk_product = array_chunk($get_all_product, 4);
         foreach ($arr_chunk_product as $chunk_products) {
-            ?>
+            ?> -->
             <div class="section group">
                 <?php foreach ($chunk_products as $single_products) { ?>
                     <div class="grid_1_of_4 images_1_of_4">
@@ -24,7 +23,6 @@
                     <?php
                 }
                 ?>
-
             </div>
             <?php
         }
@@ -35,7 +33,6 @@
             </div>
             <div class="clear"></div>
         </div>
-
     </div>
 </div>
 <style>

@@ -18,8 +18,8 @@ class Product extends CI_Controller
     public function manage_product()
     {
         $data=array();
-        $data['get_all_product'] = $this->product_model->get_all_product();
-        $data['maincontent']     = $this->load->view('admin/pages/manage_product', $data, true);
+        $data['get_all_product']= $this->product_model->get_all_product();
+        $data['maincontent']= $this->load->view('admin/pages/manage_product', $data, true);
         $this->load->view('admin/master', $data);
     }
 
@@ -36,7 +36,6 @@ class Product extends CI_Controller
         $data['product_feature']=$this->input->post('product_feature');
         $data['publication_status']=$this->input->post('publication_status');
         $data['product_author']=$this->session->userdata('user_id');
-
         $this->form_validation->set_rules('product_title', 'Product Title', 'trim|required');
         $this->form_validation->set_rules('product_short_description', 'Product Short Description', 'trim|required');
         $this->form_validation->set_rules('product_long_description', 'Product Long Status', 'trim|required');
@@ -46,13 +45,11 @@ class Product extends CI_Controller
         $this->form_validation->set_rules('product_brand', 'Product Brand', 'trim|required');
         $this->form_validation->set_rules('product_feature', 'Product Feature', 'trim');
         $this->form_validation->set_rules('publication_status', 'Publication Status', 'trim|required');
-
         if (!empty($_FILES['product_image']['name'])) {
             $config['upload_path']='./uploads/';
             $config['allowed_types']='gif|jpg|png';
             $this->upload->initialize($config);
-
-            if (!$this->upload->do_upload('product_image')) {
+        if (!$this->upload->do_upload('product_image')) {
                 $error = $this->upload->display_errors();
                 $this->session->set_flashdata('message', $error);
                 redirect('add/product');
@@ -94,7 +91,7 @@ class Product extends CI_Controller
             $this->session->set_flashdata('message','UnPublished Product Sucessfully');
             redirect('manage/product');
         } else {
-            $this->session->set_flashdata('message','UnPublished Product  Failed');
+            $this->session->set_flashdata('message','UnPublished ProductFailed!');
             redirect('manage/product');
         }
     }
@@ -133,8 +130,8 @@ class Product extends CI_Controller
         $this->form_validation->set_rules('publication_status', 'Publication Status', 'trim|required');
 
         if (!empty($_FILES['product_image']['name'])) {
-            $config['upload_path']   = './uploads/';
-            $config['allowed_types'] = 'gif|jpg|png';
+            $config['upload_path']='./uploads/';
+            $config['allowed_types']='gif|jpg|png';
             $this->upload->initialize($config);
             if (!$this->upload->do_upload('product_image')) {
                 $error = $this->upload->display_errors();
@@ -146,17 +143,17 @@ class Product extends CI_Controller
                 unlink($delete_image);
             }
         }
-        if ($this->form_validation->run() == true) {
+        if ($this->form_validation->run() ==true) {
             $result = $this->product_model->update_product_info($data, $id);
             if ($result) {
                 $this->session->set_flashdata('message', 'Product Updated Sucessfully');
                 redirect('manage/product');
             } else {
-                $this->session->set_flashdata('message', 'Product Updated Failed');
+                $this->session->set_flashdata('message','Product Updated Failed');
                 redirect('manage/product');
             }
         } else {
-            $this->session->set_flashdata('message', validation_errors());
+            $this->session->set_flashdata('message',validation_errors());
             redirect('add/product');
         }
     }
@@ -166,7 +163,7 @@ class Product extends CI_Controller
         unlink('uploads/' . $delete_image->product_image);
         $result = $this->product_model->delete_product_info($id);
         if ($result) {
-            $this->session->set_flashdata('message', 'Product Deleted Sucessfully');
+            $this->session->set_flashdata('message','Product Deleted Sucessfully');
             redirect('manage/product');
         } else {
             $this->session->set_flashdata('message', 'Product Deleted Failed');

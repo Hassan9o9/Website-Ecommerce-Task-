@@ -46,4 +46,16 @@ class Customer extends CI_Controller
             redirect('admin');
         }
     }
+    public function customer(){
+    $this->load->view('manage/customer');
+    $data['manage_customer'] = $this->Customer_model->manage_customer();
+    $this->load->view('manage_customer', $data);
+}
+
+
+public function delete_product() {
+    $this->Mod_admin->delete();
+    $this->session->set_flashdata('message', '<p>Product were successfully deleted!</p>');
+    redirect('manage_customer');
+}
 }

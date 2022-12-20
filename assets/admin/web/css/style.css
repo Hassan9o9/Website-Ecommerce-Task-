@@ -173,8 +173,8 @@ body {
 	background: url(../images/body_bg3.jpg);
 }
 .wrap {
-	width: 98%;
-	margin: -15px auto;
+	width: 78%;
+	margin: 0 auto;
 	padding: 0 1%;
 	background: #fff;
 }
@@ -735,11 +735,10 @@ button.grey:hover,
 	float: left;
 	margin-right: 10%;
 }
-
 .heading h3 {
 	font-family: "Monda", sans-serif;
 	font-size: 22px;
-	color:white;
+	color: #602d8d;
 	text-transform: uppercase;
 }
 .sort,

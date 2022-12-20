@@ -17,12 +17,10 @@ class AdminLogin extends CI_Controller
         $this->form_validation->set_rules('user_email', 'User Email', 'required|valid_email');
         $this->form_validation->set_rules('user_password', 'User Password', 'required');
         if ($this->form_validation->run() == true) {
-            $data                  = array();
-            $data['user_email']    = $this->input->post('user_email');
-            $data['user_password'] = md5($this->input->post('user_password'));
-
+            $data=array();
+            $data['user_email']=$this->input->post('user_email');
+            $data['user_password']=md5($this->input->post('user_password'));
             $result=$this->adminlogin_model->admin_login_check($data);
-
             if($result) {
                 $this->session->set_userdata('user_email', $result->user_email);
                 $this->session->set_userdata('user_name', $result->user_name);

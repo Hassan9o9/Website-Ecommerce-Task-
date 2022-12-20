@@ -42,27 +42,23 @@
                             <th>Zipcode</th>
                         </tr>
             </thead>
-
 <!-- <?php
-foreach ($tbl_customer as $row) {
+foreach ($customer as $row) {
     echo
     '<tr>
-
-                          <td>' . $row->name . '</td>
-                          <td>' . $row->password . '</td>
-                          <td>' . $row->city . '</td>
-                          <td>' . $row->phone . '</td>
-                          <td>' . $row->email . '</td>
-                          <td>' . $row->address . '</td>
-                          <td>' . $row->country . '</td>
-                          <td>' . $row->zipcode . '</td>
-                          <td>'.'<a href="#">' . 'Edit</a>' . '</td>
-                          <td>' . '<a href="#">' . 'Delete</a>' . '</td>
-                      </tr>';
-
-} 
+    <td>' . $row->name . '</td>
+    <td>' . $row->password . '</td>
+    <td>' . $row->city . '</td>
+    <td>' . $row->phone . '</td>
+    <td>' . $row->email . '</td>
+    <td>' . $row->address . '</td>
+    <td>' . $row->country . '</td>
+    <td>' . $row->zipcode . '</td>
+    <td>' . '<a href="#">' . 'Edit</a>' . '</td>
+    <td>' . '<a href="#">' . 'Delete</a>' . '</td>
+    </tr>';
+}
 ?> -->
-
             </table>
         </div>
     </div>

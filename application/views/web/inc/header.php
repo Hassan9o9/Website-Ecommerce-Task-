@@ -21,12 +21,12 @@
     <link rel="shortcut icon" type="image/x-icon" href="<?php echo base_url('uploads/'); ?><?php echo get_option('site_logo'); ?>" />
 </head>
 <body>
-    <div class="wrap" style=" width: 98%">
+    <div class="wrap">
         <div class="header_top">
             <div class="logo">
                 <a href="<?php echo base_url('/'); ?>"><img src="<?php echo base_url('uploads/'); ?><?php echo get_option('site_logo'); ?>" alt="" /></a>
             </div>
-            <div class="header_top_right" style="float: right;width: 48%;margin-top: 30px">
+            <div class="header_top_right">
                 <div class="search_box">
                     <form method="get" action="<?php echo base_url('search')?>">
                         <input type="text" placeholder="Search for Products" name="search">
@@ -58,7 +58,7 @@
             <div class="clear"></div>
         </div>
         <div class="menu">
-            <ul id="dc_mega-menu-orange" style="float:left" class="dc_mm-orange">
+            <ul id="dc_mega-menu-orange"  class="dc_mm-orange">
                 <li class="<?php
                 if ($this->uri->uri_string() == '') {
                     echo "active";
@@ -89,7 +89,11 @@
                     echo "active";
                 }
                 ?>"><a href="<?php echo base_url('/customer/login'); ?>">Login</a> </li>
-                
+                <li class="<?php
+                if ($this->uri->uri_string() == 'customer/register') {
+                    echo "active";
+                }
+                ?>"><a href="<?php echo base_url('/customer/register'); ?>">Register</a> </li>
                 
                 <?php }?>
                 
